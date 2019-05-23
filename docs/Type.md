@@ -1,0 +1,7 @@
+# ShipEngineApi::Type
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+
