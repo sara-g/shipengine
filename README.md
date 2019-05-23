@@ -1,45 +1,3 @@
-# ShipEngine - the Ruby library for the ShipEngine™
-
-ShipEngine - the Ruby gem for the ShipEngine
-
-This library is currently in __beta__
-
-## Installation
-
-### Build a gem
-
-To build the Ruby code into a gem:
-
-```shell
-gem build shipengine_api.gemspec
-```
-
-Then either install the gem locally:
-
-```shell
-gem install ./shipengine_api-1.0.0-262c365.gem
-```
-(for development, run `gem install --dev ./shipengine_api-1.0.0-262c365.gem` to install the development dependencies)
-
-or publish the gem to a gem hosting service, e.g. [RubyGems](https://rubygems.org/).
-
-Finally add this to the Gemfile:
-
-    gem 'shipengine_api', '~> 1.0.0-262c365'
-
-### Install from Git
-
-If the Ruby gem is hosted at a git repository: https://github.com/GIT_USER_ID/GIT_REPO_ID, then add the following in the Gemfile:
-
-    gem 'shipengine_api', :git => 'https://github.com/GIT_USER_ID/GIT_REPO_ID.git'
-
-### Include the Ruby code directly
-
-Include the Ruby code directly using `-I` as follows:
-
-```shell
-ruby -Ilib script.rb
-```
 
 ## Getting Started
 
@@ -58,7 +16,7 @@ end
 
 api_instance = ShipEngineApi::AddressValidationApi.new
 
-body = [ShipEngineApi::Address.new] # Array<Address> | 
+body = [ShipEngineApi::Address.new] # Array<Address> |
 
 
 begin
@@ -378,4 +336,3 @@ Class | Method | HTTP request | Description
 - **Type**: API key
 - **API key parameter name**: api-key
 - **Location**: HTTP header
-
