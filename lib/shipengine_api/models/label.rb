@@ -42,7 +42,7 @@ module ShipEngineApi
     attr_accessor :is_international
 
     # If this label was created as part of a [batch](https://docs.shipengine.com/docs/using-batches), then this is the unique ID of that batch.
-    attr_accessor :batch_id
+    # attr_accessor :batch_id
 
     # The unique ID of the [carrier account](https://docs.shipengine.com/docs/setup-a-carrier) that was used to create this label
     attr_accessor :carrier_id
@@ -80,7 +80,7 @@ module ShipEngineApi
         :'is_return_label' => :'is_return_label',
         :'rma_number' => :'rma_number',
         :'is_international' => :'is_international',
-        :'batch_id' => :'batch_id',
+        # :'batch_id' => :'batch_id',
         :'carrier_id' => :'carrier_id',
         :'service_code' => :'service_code',
         :'voided' => :'voided',
@@ -105,7 +105,7 @@ module ShipEngineApi
         :'is_return_label' => :'BOOLEAN',
         :'rma_number' => :'String',
         :'is_international' => :'BOOLEAN',
-        :'batch_id' => :'String',
+        # :'batch_id' => :'String',
         :'carrier_id' => :'String',
         :'service_code' => :'String',
         :'voided' => :'BOOLEAN',
@@ -162,9 +162,9 @@ module ShipEngineApi
         self.is_international = attributes[:'is_international']
       end
 
-      if attributes.has_key?(:'batch_id')
-        self.batch_id = attributes[:'batch_id']
-      end
+      # if attributes.has_key?(:'batch_id')
+      #   self.batch_id = attributes[:'batch_id']
+      # end
 
       if attributes.has_key?(:'carrier_id')
         self.carrier_id = attributes[:'carrier_id']
@@ -365,10 +365,10 @@ module ShipEngineApi
       return false if @is_return_label.nil?
       return false if @rma_number.nil?
       return false if @is_international.nil?
-      return false if @batch_id.nil?
-      return false if @batch_id.to_s.length > 25
-      return false if @batch_id.to_s.length < 1
-      return false if @batch_id !~ Regexp.new(/^se(-[a-z0-9]+)+$/)
+      # return false if @batch_id.nil?
+      # return false if @batch_id.to_s.length > 25
+      # return false if @batch_id.to_s.length < 1
+      # return false if @batch_id !~ Regexp.new(/^se(-[a-z0-9]+)+$/)
       return false if @carrier_id.nil?
       return false if @carrier_id.to_s.length > 25
       return false if @carrier_id.to_s.length < 1
@@ -446,25 +446,25 @@ module ShipEngineApi
 
     # Custom attribute writer method with validation
     # @param [Object] batch_id Value to be assigned
-    def batch_id=(batch_id)
-      if batch_id.nil?
-        fail ArgumentError, 'batch_id cannot be nil'
-      end
-
-      if batch_id.to_s.length > 25
-        fail ArgumentError, 'invalid value for "batch_id", the character length must be smaller than or equal to 25.'
-      end
-
-      if batch_id.to_s.length < 1
-        fail ArgumentError, 'invalid value for "batch_id", the character length must be great than or equal to 1.'
-      end
-
-      if batch_id !~ Regexp.new(/^se(-[a-z0-9]+)+$/)
-        fail ArgumentError, 'invalid value for "batch_id", must conform to the pattern /^se(-[a-z0-9]+)+$/.'
-      end
-
-      @batch_id = batch_id
-    end
+    # def batch_id=(batch_id)
+    #   if batch_id.nil?
+    #     fail ArgumentError, 'batch_id cannot be nil'
+    #   end
+    #
+    #   if batch_id.to_s.length > 25
+    #     fail ArgumentError, 'invalid value for "batch_id", the character length must be smaller than or equal to 25.'
+    #   end
+    #
+    #   if batch_id.to_s.length < 1
+    #     fail ArgumentError, 'invalid value for "batch_id", the character length must be great than or equal to 1.'
+    #   end
+    #
+    #   if batch_id !~ Regexp.new(/^se(-[a-z0-9]+)+$/)
+    #     fail ArgumentError, 'invalid value for "batch_id", must conform to the pattern /^se(-[a-z0-9]+)+$/.'
+    #   end
+    #
+    #   @batch_id = batch_id
+    # end
 
     # Custom attribute writer method with validation
     # @param [Object] carrier_id Value to be assigned
