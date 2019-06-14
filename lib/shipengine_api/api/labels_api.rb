@@ -1,7 +1,7 @@
 =begin
 #ShipEngine API
 
-#ShipEngine™ is the world's best multi-carrier shipping API, with more than 20 supported shipping carriers.  You can easily get and compare shipping rates, print labels, track your shipments, and validate addresses anywhere in the world.  ### Worldwide Major Carrier Support Access the top global carriers in minutes—instead of weeks. Simply [connect your existing carrier accounts](https://docs.shipengine.com/docs/setup-a-carrier) in the API dashboard, and then [begin creating labels](https://docs.shipengine.com/docs/use-a-specific-service).  ### Real-Time Tracking [Track packages](https://docs.shipengine.com/docs/track-a-package) across any of our 20+ supported carrier accounts and create tracking events to keep your customers up-to-date. Easily integrate real-time tracking information for shipments into your app, email, or SMS.  ### Get Rates Across Carriers Make sure you ship as cost-effectively as possible by [quickly comparing rates](https://docs.shipengine.com/docs/get-shipping-rates) using the ShipEngine Rates API. As long as you have the carrier connected to your account, you'll be able to see and compare different rates and services.  ### Global Address Validation No matter your shipping volume, failed deliveries and address change surcharges cut into your bottom line and damage perception with customers. Our address validation services ensure your packages make it to the right place the first time. [Learn how to leverage our address validation services here.](https://docs.shipengine.com/docs/address-validation)  ShipEngine supports address validation for over 180 countries, including the United States, Canada, Great Britain, Australia, Germany, France, Norway, Spain, Sweden, Israel, Italy, and more. 
+#ShipEngine™ is the world's best multi-carrier shipping API, with more than 20 supported shipping carriers.  You can easily get and compare shipping rates, print labels, track your shipments, and validate addresses anywhere in the world.  ### Worldwide Major Carrier Support Access the top global carriers in minutes—instead of weeks. Simply [connect your existing carrier accounts](https://docs.shipengine.com/docs/setup-a-carrier) in the API dashboard, and then [begin creating labels](https://docs.shipengine.com/docs/use-a-specific-service).  ### Real-Time Tracking [Track packages](https://docs.shipengine.com/docs/track-a-package) across any of our 20+ supported carrier accounts and create tracking events to keep your customers up-to-date. Easily integrate real-time tracking information for shipments into your app, email, or SMS.  ### Get Rates Across Carriers Make sure you ship as cost-effectively as possible by [quickly comparing rates](https://docs.shipengine.com/docs/get-shipping-rates) using the ShipEngine Rates API. As long as you have the carrier connected to your account, you'll be able to see and compare different rates and services.  ### Global Address Validation No matter your shipping volume, failed deliveries and address change surcharges cut into your bottom line and damage perception with customers. Our address validation services ensure your packages make it to the right place the first time. [Learn how to leverage our address validation services here.](https://docs.shipengine.com/docs/address-validation)  ShipEngine supports address validation for over 180 countries, including the United States, Canada, Great Britain, Australia, Germany, France, Norway, Spain, Sweden, Israel, Italy, and more.
 
 OpenAPI spec version: 1.0.0
 Contact: sales@shipengine.com
@@ -20,8 +20,8 @@ module ShipEngineApi
       @api_client = api_client
     end
     # labels.get_by_id
-    # 
-    # @param label_id 
+    #
+    # @param label_id
     # @param [Hash] opts the optional parameters
     # @return [Label]
     def v1_labels_by_label_id_get(label_id, opts = {})
@@ -30,8 +30,8 @@ module ShipEngineApi
     end
 
     # labels.get_by_id
-    # 
-    # @param label_id 
+    #
+    # @param label_id
     # @param [Hash] opts the optional parameters
     # @return [Array<(Label, Fixnum, Hash)>] Label data, response status code and response headers
     def v1_labels_by_label_id_get_with_http_info(label_id, opts = {})
@@ -86,7 +86,7 @@ module ShipEngineApi
       return data, status_code, headers
     end
     # Searchforshippinglabelsyou'vecreated
-    # This endpoint returns a list of labels that you've [created](https://docs.shipengine.com/docs/quickstart-create-a-label). You can optionally filter the results as well as control their sort order and the number of results returned at a time.  By default, all labels are returned, 25 at a time, starting with the most recently created ones.  You can combine multiple filter options to narrow-down the results.  For example, if you only want to get your UPS labels for your east coast warehouse you could query by both `warehouse_id` and `carrier_id`  > ###### Warning > Test labels (those created with `test_label: true`) are not included in the results.  If you've only ever created test labels, then the results will be empty. 
+    # This endpoint returns a list of labels that you've [created](https://docs.shipengine.com/docs/quickstart-create-a-label). You can optionally filter the results as well as control their sort order and the number of results returned at a time.  By default, all labels are returned, 25 at a time, starting with the most recently created ones.  You can combine multiple filter options to narrow-down the results.  For example, if you only want to get your UPS labels for your east coast warehouse you could query by both `warehouse_id` and `carrier_id`  > ###### Warning > Test labels (those created with `test_label: true`) are not included in the results.  If you've only ever created test labels, then the results will be empty.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :label_status Only return labels that are currently in the specified status
     # @option opts [String] :carrier_id Only return labels for a specific [carrier account](https://docs.shipengine.com/docs/setup-a-carrier)
@@ -107,7 +107,7 @@ module ShipEngineApi
     end
 
     # Searchforshippinglabelsyou&#39;vecreated
-    # This endpoint returns a list of labels that you&#39;ve [created](https://docs.shipengine.com/docs/quickstart-create-a-label). You can optionally filter the results as well as control their sort order and the number of results returned at a time.  By default, all labels are returned, 25 at a time, starting with the most recently created ones.  You can combine multiple filter options to narrow-down the results.  For example, if you only want to get your UPS labels for your east coast warehouse you could query by both &#x60;warehouse_id&#x60; and &#x60;carrier_id&#x60;  &gt; ###### Warning &gt; Test labels (those created with &#x60;test_label: true&#x60;) are not included in the results.  If you&#39;ve only ever created test labels, then the results will be empty. 
+    # This endpoint returns a list of labels that you&#39;ve [created](https://docs.shipengine.com/docs/quickstart-create-a-label). You can optionally filter the results as well as control their sort order and the number of results returned at a time.  By default, all labels are returned, 25 at a time, starting with the most recently created ones.  You can combine multiple filter options to narrow-down the results.  For example, if you only want to get your UPS labels for your east coast warehouse you could query by both &#x60;warehouse_id&#x60; and &#x60;carrier_id&#x60;  &gt; ###### Warning &gt; Test labels (those created with &#x60;test_label: true&#x60;) are not included in the results.  If you&#39;ve only ever created test labels, then the results will be empty.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :label_status Only return labels that are currently in the specified status
     # @option opts [String] :carrier_id Only return labels for a specific [carrier account](https://docs.shipengine.com/docs/setup-a-carrier)
@@ -157,17 +157,17 @@ module ShipEngineApi
         fail ArgumentError, 'invalid value for "opts[:"tracking_number"]" when calling LabelsApi.v1_labels_get, the character length must be great than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'batch_id'].nil? && opts[:'batch_id'].to_s.length > 25
-        fail ArgumentError, 'invalid value for "opts[:"batch_id"]" when calling LabelsApi.v1_labels_get, the character length must be smaller than or equal to 25.'
-      end
+      # if @api_client.config.client_side_validation && !opts[:'batch_id'].nil? && opts[:'batch_id'].to_s.length > 25
+      #   fail ArgumentError, 'invalid value for "opts[:"batch_id"]" when calling LabelsApi.v1_labels_get, the character length must be smaller than or equal to 25.'
+      # end
 
-      if @api_client.config.client_side_validation && !opts[:'batch_id'].nil? && opts[:'batch_id'].to_s.length < 1
-        fail ArgumentError, 'invalid value for "opts[:"batch_id"]" when calling LabelsApi.v1_labels_get, the character length must be great than or equal to 1.'
-      end
-
-      if @api_client.config.client_side_validation && !opts[:'batch_id'].nil? && opts[:'batch_id'] !~ Regexp.new(/^se(-[a-z0-9]+)+$/)
-        fail ArgumentError, "invalid value for 'opts[:\"batch_id\"]' when calling LabelsApi.v1_labels_get, must conform to the pattern /^se(-[a-z0-9]+)+$/."
-      end
+      # if @api_client.config.client_side_validation && !opts[:'batch_id'].nil? && opts[:'batch_id'].to_s.length < 1
+      #   fail ArgumentError, 'invalid value for "opts[:"batch_id"]" when calling LabelsApi.v1_labels_get, the character length must be great than or equal to 1.'
+      # end
+      #
+      # if @api_client.config.client_side_validation && !opts[:'batch_id'].nil? && opts[:'batch_id'] !~ Regexp.new(/^se(-[a-z0-9]+)+$/)
+      #   fail ArgumentError, "invalid value for 'opts[:\"batch_id\"]' when calling LabelsApi.v1_labels_get, must conform to the pattern /^se(-[a-z0-9]+)+$/."
+      # end
 
       if @api_client.config.client_side_validation && !opts[:'warehouse_id'].nil? && opts[:'warehouse_id'].to_s.length > 25
         fail ArgumentError, 'invalid value for "opts[:"warehouse_id"]" when calling LabelsApi.v1_labels_get, the character length must be smaller than or equal to 25.'
@@ -204,7 +204,7 @@ module ShipEngineApi
       query_params[:'carrier_id'] = opts[:'carrier_id'] if !opts[:'carrier_id'].nil?
       query_params[:'service_code'] = opts[:'service_code'] if !opts[:'service_code'].nil?
       query_params[:'tracking_number'] = opts[:'tracking_number'] if !opts[:'tracking_number'].nil?
-      query_params[:'batch_id'] = opts[:'batch_id'] if !opts[:'batch_id'].nil?
+      # query_params[:'batch_id'] = opts[:'batch_id'] if !opts[:'batch_id'].nil?
       query_params[:'warehouse_id'] = opts[:'warehouse_id'] if !opts[:'warehouse_id'].nil?
       query_params[:'created_at_start'] = opts[:'created_at_start'] if !opts[:'created_at_start'].nil?
       query_params[:'created_at_end'] = opts[:'created_at_end'] if !opts[:'created_at_end'].nil?
@@ -239,9 +239,9 @@ module ShipEngineApi
       return data, status_code, headers
     end
     # labels.purchase_label_with_rate
-    # 
-    # @param rate_id 
-    # @param body 
+    #
+    # @param rate_id
+    # @param body
     # @param [Hash] opts the optional parameters
     # @return [Label]
     def v1_labels_rates_by_rate_id_post(rate_id, body, opts = {})
@@ -250,9 +250,9 @@ module ShipEngineApi
     end
 
     # labels.purchase_label_with_rate
-    # 
-    # @param rate_id 
-    # @param body 
+    #
+    # @param rate_id
+    # @param body
     # @param [Hash] opts the optional parameters
     # @return [Array<(Label, Fixnum, Hash)>] Label data, response status code and response headers
     def v1_labels_rates_by_rate_id_post_with_http_info(rate_id, body, opts = {})
@@ -311,9 +311,9 @@ module ShipEngineApi
       return data, status_code, headers
     end
     # labels.purchase_label_with_shipment
-    # 
-    # @param shipment_id 
-    # @param body 
+    #
+    # @param shipment_id
+    # @param body
     # @param [Hash] opts the optional parameters
     # @return [Label]
     def v1_labels_shipment_by_shipment_id_post(shipment_id, body, opts = {})
@@ -322,9 +322,9 @@ module ShipEngineApi
     end
 
     # labels.purchase_label_with_shipment
-    # 
-    # @param shipment_id 
-    # @param body 
+    #
+    # @param shipment_id
+    # @param body
     # @param [Hash] opts the optional parameters
     # @return [Array<(Label, Fixnum, Hash)>] Label data, response status code and response headers
     def v1_labels_shipment_by_shipment_id_post_with_http_info(shipment_id, body, opts = {})
@@ -383,8 +383,8 @@ module ShipEngineApi
       return data, status_code, headers
     end
     # labels.track
-    # 
-    # @param label_id 
+    #
+    # @param label_id
     # @param [Hash] opts the optional parameters
     # @return [TrackingInformationResponseBody]
     def v1_labels_track_by_label_id_get(label_id, opts = {})
@@ -393,8 +393,8 @@ module ShipEngineApi
     end
 
     # labels.track
-    # 
-    # @param label_id 
+    #
+    # @param label_id
     # @param [Hash] opts the optional parameters
     # @return [Array<(TrackingInformationResponseBody, Fixnum, Hash)>] TrackingInformationResponseBody data, response status code and response headers
     def v1_labels_track_by_label_id_get_with_http_info(label_id, opts = {})
@@ -449,8 +449,8 @@ module ShipEngineApi
       return data, status_code, headers
     end
     # labels.void_label
-    # 
-    # @param label_id 
+    #
+    # @param label_id
     # @param [Hash] opts the optional parameters
     # @return [VoidLabelResponseBody]
     def v1_labels_void_by_label_id_put(label_id, opts = {})
@@ -459,8 +459,8 @@ module ShipEngineApi
     end
 
     # labels.void_label
-    # 
-    # @param label_id 
+    #
+    # @param label_id
     # @param [Hash] opts the optional parameters
     # @return [Array<(VoidLabelResponseBody, Fixnum, Hash)>] VoidLabelResponseBody data, response status code and response headers
     def v1_labels_void_by_label_id_put_with_http_info(label_id, opts = {})
